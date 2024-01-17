@@ -22,11 +22,26 @@ This repository contains a few scripts written for analyzing behavioral and EEG 
 - Analysis script:
   - Subject rejection based on a priori accuracy requirements.
   - Statistical analysis of RTs and responses using linear mixed-effects models.
-  - Vizualization of RTs and responses.
+  - Visualization of RTs and responses.
 - Sample raw and preprocessed data files.
-- An auxilary ordering file used for preprocessing.
+- An auxiliary ordering file used for preprocessing.
 - Examples of figures output for the full data set.
 
 >[!NOTE]
 >Because the full data set is quite large, only a few subjects have been included here. This is just for illustrative purposes.
 
+## EEG Data
+
+- Preprocessing script for BrainVision data
+  - Bad channel interpolation.
+  - Re-reference to mean of all channels.
+  - Filtering.
+  - Manual ICA to remove eye and muscle artifacts.
+- Group-level time-frequency analysis script for .fif data:
+  - Re-structure event markers and epoch data.
+  - Compute mean time-frequency representations (TFRs) for each subject/condition.
+  - Perform spatiotemporal cluster test on group-level TFRs (using threshold-free cluster enhancement).
+  - Visualize significant spatiotemporal clusters.
+
+>[!NOTE]
+>Because raw EEG recordings are so large, I haven't included any sample data here.
